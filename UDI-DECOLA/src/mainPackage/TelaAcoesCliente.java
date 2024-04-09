@@ -1,6 +1,8 @@
 package mainPackage;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -46,8 +48,22 @@ public class TelaAcoesCliente extends JFrame {
 		JLabel lblNewLabel = new JLabel("Aqui está as ações que você tem como cliente:");
 		
 		JButton btnNewButton = new JButton("comprar passagem");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				TelaCompra telaDeCompra = new TelaCompra();
+				telaDeCompra.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JButton btnNewButton_1 = new JButton("pesquisar voos e hotéis disponíveis");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				TelaPesquisaVooHotel telaDePesquisa = new TelaPesquisaVooHotel();
+				telaDePesquisa.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JButton btnNewButton_2 = new JButton("qual minha situação de beneficio VIP");
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);

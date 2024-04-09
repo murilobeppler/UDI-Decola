@@ -5,6 +5,7 @@ public class Compra {
 private String nomeCliente;
 private String horaCompra;
 private int numPessoas;
+
 //passagem aerea
 //diaria em hoteis
 

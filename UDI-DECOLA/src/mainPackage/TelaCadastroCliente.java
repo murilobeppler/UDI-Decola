@@ -1,6 +1,8 @@
 package mainPackage;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -79,6 +81,13 @@ public class TelaCadastroCliente extends JFrame {
 		textField_2.setColumns(10);
 		
 		JButton btnNewButton = new JButton("ir para tela de login");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				TelaLogin telaDeLogin = new TelaLogin();
+				telaDeLogin.setVisible(true);
+				dispose();
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)

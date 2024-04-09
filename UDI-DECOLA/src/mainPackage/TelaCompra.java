@@ -20,6 +20,8 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Date;
 import java.util.Calendar;
 import javax.swing.JToolBar;
@@ -93,8 +95,21 @@ public class TelaCompra extends JFrame {
 		JSpinner spinner_1 = new JSpinner();
 		
 		JButton btnNewButton_1 = new JButton("ir para tela de pagamento");
-		
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				TelaCompra telaDeCompra = new TelaCompra();
+				telaDeCompra.setVisible(true);
+				dispose();
+			}
+		});
 		JButton btnNewButton_2 = new JButton("voltar para tela de pesquisa");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				TelaPesquisaVooHotel telaDePesquisa = new TelaPesquisaVooHotel();
+				telaDePesquisa.setVisible(true);
+				dispose();
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)

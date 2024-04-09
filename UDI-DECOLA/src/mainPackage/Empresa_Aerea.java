@@ -2,10 +2,10 @@ package mainPackage;
 
 public class Empresa_Aerea {
 	//atributos
-	private String CNPJ;
-	private String nome;
-	private String nomeDiv;
-	private String dataCriacao;
+	private static String CNPJ;
+	private static String nome;
+	private static String nomeDiv;
+	private static String dataCriacao;
 
 //constantes
 public static final float precoUDI = 700;

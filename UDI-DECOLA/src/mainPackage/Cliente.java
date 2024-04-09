@@ -79,4 +79,11 @@ public VIP viraVip(){
 		setVip(true);
 		return vip1;
 }
+	public ClienteFuncionario setNewClienteFuncionario(){
+		ClienteFuncionario clienteFuncionario1 = new ClienteFuncionario(getDataNascimento(), getEmail(), getNome(), getCPF(), getEndereco());
+		setClienteFuncionario(true);
+		return clienteFuncionario1;
+	}
 }
+
+

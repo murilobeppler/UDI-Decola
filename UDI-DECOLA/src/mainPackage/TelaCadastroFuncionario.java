@@ -13,6 +13,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JFormattedTextField;
 import java.awt.SystemColor;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -87,6 +89,13 @@ public class TelaCadastroFuncionario extends JFrame {
 		textField_1.setColumns(10);
 		
 		JButton btnNewButton = new JButton("ir para tela de login");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				TelaLogin telaDeLogin = new TelaLogin();
+				telaDeLogin.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JLabel lblNewLabel_7 = new JLabel("deseja ser cadastrado como cliente também?");
 		
