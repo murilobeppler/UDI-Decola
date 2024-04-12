@@ -7,9 +7,9 @@ public class Triple extends Standart{
 	private float desconto;
 
 //Cosntrutores
-public Triple(String CNPJ, String nome, String nomeDiv, String endereco, String cidade, String anoCriacao, int numEstrelas, boolean aceitaPet, boolean aceitaCancel, int numQuartos, String check_in, String check_out, String descricao, String data,int qntDiasHospedagem ,Funcionario funcionario, int numQuartosTriple, float preco, float desconto) {
-	super(CNPJ, nome, nomeDiv, endereco, cidade, anoCriacao, numEstrelas, aceitaPet, aceitaCancel, numQuartos, check_in, check_out, descricao, data,qntDiasHospedagem,funcionario);
-	this.numQuartos = numQuartosTriple;
+public Triple(int numQuartosSingle, float preco, float desconto, int numQuartos, Hotel hotel) {
+	super(numQuartos, hotel);
+	this.numQuartos = numQuartosSingle;
 	this.preco = preco;
 	this.desconto = desconto;
 }

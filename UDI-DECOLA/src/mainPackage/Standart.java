@@ -1,13 +1,14 @@
 package mainPackage;
 
-public class Standart extends Hotel{
+public class Standart {
 	//atributos
 	private int numQuartos;
+	private Hotel hotel;
 
 //Construtores
-public Standart(String CNPJ, String nome, String nomeDiv, String endereco, String cidade, String anoCriacao, int numEstrelas, boolean aceitaPet, boolean aceitaCancel, int numQuartos, String check_in, String check_out, String descricao, String data, int qntDiasHospedagem, Funcionario funcionario) {
-	super(CNPJ, nome, nomeDiv, endereco, cidade, anoCriacao, numEstrelas, aceitaPet, aceitaCancel, numQuartos, check_in, check_out, descricao, data, qntDiasHospedagem ,funcionario);
+public Standart( int numQuartos, Hotel hotel ) {
 	this.numQuartos = numQuartos;
+	this.hotel = hotel;
 }
 //gets e sets
 public int getNumQuartos() {
@@ -16,6 +17,14 @@ public int getNumQuartos() {
 
 public void setNumQuartos(int numQuartos) {
 	this.numQuartos = numQuartos;
+}
+
+public Hotel getHotel() {
+	return hotel;
+}
+
+public void setHotel(Hotel hotel) {
+	this.hotel = hotel;
 }
 
 //metodos

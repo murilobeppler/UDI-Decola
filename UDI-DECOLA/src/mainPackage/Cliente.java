@@ -65,9 +65,6 @@ public boolean isFuncionario() {return isFuncionario;}
 public void setClienteFuncionario(boolean funcionario){ this.isFuncionario = funcionario; }
 
 	//metodos
-public void adicionarCPFCliente(CadastroCliente cadastroClientes) {
-		cadastroClientes.adicionarCPFCliente(this.getCPF());
-	}
 public static boolean validarEmail(String email) {
 	String regex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
 	Pattern pattern = Pattern.compile(regex);

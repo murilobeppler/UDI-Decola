@@ -80,9 +80,20 @@ public class TelaCadastroCliente extends JFrame {
 		textField_2.setToolTipText("rua/avenida xxx N yyy");
 		textField_2.setColumns(10);
 		
-		JButton btnNewButton = new JButton("ir para tela de login");
+		JButton btnNewButton = new JButton(" Salvar e ir para tela de login");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
+				String nome = textField.getText();
+				String cpf = frmtdtxtfldYyyy.getText();
+				String dataNascimento = frmtdtxtfldDdmmaaaa.getText();
+				String email = textField_1.getText();
+				String endereco = textField_2.getText();
+
+				Cliente cliente = new Cliente(dataNascimento, email, nome, cpf, endereco);
+
+				DadosCliente clientes = new DadosCliente();
+				clientes.cadastrar(cliente);
+
 				TelaLogin telaDeLogin = new TelaLogin();
 				telaDeLogin.setVisible(true);
 				dispose();

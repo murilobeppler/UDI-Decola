@@ -3,7 +3,6 @@ package mainPackage;
 public class Voo extends Empresa_Aerea {
 	//atributos
 	private String codigoIden; //3 letras(origem) e 5 números(3 primeiros são os assentos do avião, os dois últimos o id da empresa aérea)
-	private String nomeEmpresa;
 	private String lclOrigem; //saopaulo.sp.br
 	private String lclDestino; //belohorizonte.bh.br
 	private String horaSaida;
@@ -15,13 +14,11 @@ public class Voo extends Empresa_Aerea {
 	private float multiPrimavera;
 	private float multiOutono;
 	private String dataVoo;
-	private Empresa_Aerea empresaAerea;
 	private int epocaAno;
 
 //Construtores
-public Voo(String codigoIden, String lclOrigem, String dataVoo, String nomeEmpresa, String lclDestino, String horaSaida, String horaChegada, float preco, int numVagas, float multiInverno,float multiVerao, float multiPrimavera, float multiOutono, String CNPJ, String nome, String nomeDiv, String dataCriacao, Empresa_Aerea empresaAerea, int epocaAno){
+public Voo(String codigoIden, String lclOrigem, String dataVoo, String lclDestino, String horaSaida, String horaChegada, float preco, int numVagas, float multiInverno,float multiVerao, float multiPrimavera, float multiOutono, String CNPJ, String nome, String nomeDiv, String dataCriacao, int epocaAno){
 	super(CNPJ, nome, nomeDiv, dataCriacao);
-	this.nomeEmpresa = nomeEmpresa;
 	this.codigoIden = codigoIden;
 	this.lclOrigem = lclOrigem;
 	this.lclDestino = lclDestino;
@@ -30,7 +27,6 @@ public Voo(String codigoIden, String lclOrigem, String dataVoo, String nomeEmpre
 	this.preco = preco;
 	this.numVagas = numVagas;
 	this.dataVoo = dataVoo;
-	this.empresaAerea = empresaAerea;
 	this.multiInverno = multiInverno;
 	this.multiVerao = multiVerao;
 	this.multiOutono = multiOutono;
@@ -81,13 +77,9 @@ public void setNumVagas(int numVagas) {
 	this.numVagas = numVagas;
 }
 
-public String getNomeEmpresa() {
-	return nomeEmpresa;
-}
 
-public void setNomeEmpresa(String nomeEmpresa){
-	this.nomeEmpresa = nomeEmpresa;
-}
+
+
 
 public String getDataVoo() {
 	return dataVoo;
@@ -95,7 +87,6 @@ public String getDataVoo() {
 public void setDataVoo(String dataVoo) {
 	this.dataVoo = dataVoo;
 }
-public Empresa_Aerea getEmpresaAerea(){return this.empresaAerea;}
 
 	public float getMultiInverno() {
 		return multiInverno;

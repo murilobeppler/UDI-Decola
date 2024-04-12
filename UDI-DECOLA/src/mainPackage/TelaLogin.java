@@ -1,18 +1,13 @@
 package mainPackage;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JLabel;
-import javax.swing.JFormattedTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JButton;
 
 public class TelaLogin extends JFrame {
 
@@ -59,6 +54,18 @@ public class TelaLogin extends JFrame {
 		passwordField = new JPasswordField();
 		
 		JButton btnNewButton = new JButton("avançar");
+		btnNewButton.addActionListener(new ActionListener() {
+			//if (consultar == 1){}
+			public void actionPerformed(ActionEvent e) {
+				TelaAcoesCliente telaAcoesCliente = new TelaAcoesCliente();
+				telaAcoesCliente.setVisible(true);
+				dispose();
+			}
+		});
+
+
+
+
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)

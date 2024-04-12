@@ -15,6 +15,7 @@ public Compra(String nomeCliente, String hora, int numPessoas){
 	this.nomeCliente = nomeCliente;
 	this.numPessoas = numPessoas;
 }
+
 //gets e sets
 public String getNomeCliente() {
 	return nomeCliente;

@@ -15,6 +15,8 @@ import java.awt.SystemColor;
 import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FirstScreen extends JFrame {
 
@@ -53,18 +55,48 @@ public class FirstScreen extends JFrame {
 		JButton btnNewButton = new JButton("Cliente");
 		btnNewButton.setBackground(SystemColor.textHighlight);
 		btnNewButton.setFont(new Font("Serif", Font.PLAIN, 14));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLogin telaLogin = new TelaLogin();
+				telaLogin.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JButton btnNewButton_1 = new JButton("Funcionário");
 		btnNewButton_1.setBackground(SystemColor.textHighlight);
 		btnNewButton_1.setFont(new Font("Serif", Font.PLAIN, 14));
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLogin telaLogin = new TelaLogin();
+				telaLogin.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JLabel lblNewLabel_2 = new JLabel("primeira vez? se cadastre como...");
 		
 		JButton btnNewButton_2 = new JButton("Cliente");
 		btnNewButton_2.setBackground(SystemColor.textHighlight);
 		btnNewButton_2.setFont(new Font("Serif", Font.PLAIN, 14));
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastroCliente telaCadastriCliente = new TelaCadastroCliente();
+				telaCadastriCliente.setVisible(true);
+				dispose();
+			}
+		});
+
+
 		
 		JButton btnNewButton_3 = new JButton("Funcionário");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastroFuncionario telaCadastroFuncionario = new TelaCadastroFuncionario();
+				telaCadastroFuncionario.setVisible(true);
+				dispose();
+			}
+		});
 		btnNewButton_3.setBackground(SystemColor.textHighlight);
 		btnNewButton_3.setFont(new Font("Serif", Font.PLAIN, 14));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -112,6 +144,7 @@ public class FirstScreen extends JFrame {
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(btnNewButton_3)
 					.addContainerGap(34, Short.MAX_VALUE))
+
 		);
 		contentPane.setLayout(gl_contentPane);
 	}

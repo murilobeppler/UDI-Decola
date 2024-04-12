@@ -2,8 +2,9 @@ package mainPackage;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.io.Serializable;
 
-public class DadosHotel {
+public class DadosHotel implements Serializable{
     private ArrayList<Hotel> dados = new ArrayList<>();
 
     public void cadastrar(Hotel hotel) {

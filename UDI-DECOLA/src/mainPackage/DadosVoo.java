@@ -2,13 +2,16 @@ package mainPackage;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.io.Serializable;
 
-public class DadosVoo {
+public class DadosVoo implements Serializable {
     private ArrayList<Voo> dados = new ArrayList<>();
 
     public void cadastrar(Voo trechoVoo){
         dados.add(trechoVoo);
     }
+
+
 
     public Voo consultar(String codigoId) {
         for (Voo trechoVoo : dados) {

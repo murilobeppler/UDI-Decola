@@ -8,7 +8,7 @@ public class Empresa_Aerea {
 	private static String dataCriacao;
 
 //constantes
-public static final float precoUDI = 700;
+public static float precoUDI = 700;
 
 //Construtores
 public Empresa_Aerea(String CNPJ, String nome, String nomeDiv, String dataCriacao){

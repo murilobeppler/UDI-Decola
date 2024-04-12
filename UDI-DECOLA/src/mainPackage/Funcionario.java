@@ -36,9 +36,6 @@ public float getValorRegistro() {
 }
 
 //metodos
-public boolean cpfClienteCadastrado(CadastroCliente cadastroClientes, String cpf) {
-	return cadastroClientes.cpfCadastrado(cpf);
-}
 
 public float calculaSalario() {
 	if(this.contadorParceria != 0) {
