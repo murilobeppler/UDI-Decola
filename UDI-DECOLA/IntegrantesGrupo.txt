@@ -3,4 +3,4 @@ Projeto UDI-Decola
 Integrantes do grupo:
 - Murilo Alves Beppler -- 12221bcc037
 - Guilherme Faglioni -- 12111bcc008
-- 
+- Renan Furlanetto -- 12211bcc011
